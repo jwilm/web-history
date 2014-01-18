@@ -1,10 +1,10 @@
 # Web Apps, Browsers, Servers, and the HTTP Protocol, OH MY! (A technical history lesson)
 
-
+Dynamic, interactive, media-rich web applications dominate today's internet landscape. One need only go back two decades in a way back machine to see the origins of the modern Web. Simple hypertext documents with hyperlinks to other documents constituted what was known as the web at the time, HTTP only supported `GET` requests, and any errors had to be inferred through the HTML or PLAINTEXT content of the response since there was no notion of a _Status Code_.
 
 ## Gopher
 
-Gopher '91 preceeds world wide web. Invented at University of Minnesota. Presents file-like hierarchy of data. Gateway to usenet and ftp. Link gopher servers to share directories, resources. Rigid document structure was not flexible enough for demands of the web. Combined with licensing fees, implementations in browsers also supporting HTTP, and licensing fees from the university of minnesota, gopher quickly fell out of favor in lieu of HTTP. Extremely simple protocol returns either menus or documents. Key word search engines index server menus titles.
+Prior to HTTP was [Gopher](http://en.wikipedia.org/wiki/Gopher_(protocol)) - a simple protocol for distributing, searching, and retrieving documents. Invented at University of Minnesota, Gopher presents a file-like hierarchy of data in addition to being a gateway to usenet and ftp. A major strength of gopher was the abilitiy to connect servers to share directories and resources. Alas, Gopher's rigid document structure was not flexible enough for demands of the web. Combined with licensing fees, implementations in browsers which also supporting HTTP, and licensing fees from the University, Gopher quickly fell out of favor in lieu of HTTP.
 
 ## HTTP
 
@@ -15,8 +15,6 @@ HTTP, short for Hypertext Transfer Protocol, was first documented at [version 0.
 Modern web apps utilize a large amount of state to deliver their service. Examples include deciding which content to send, remembering users between visits, maintaining a shopping cart when navigating between resources, and escalating a user's privilege to perform administrative actions. Since HTTP is a stateless protocol, those functionalities are achieved via _cookies_ (persistent named records stored on a client) which enable sessions and user tracking on the server.
 
 With the rise of RESTful JSON APIs, client side templating, and JavaScript frameworks, much of the work a web server does it limited to providing an API to the database. Most logic outside of administrative and other privileged tasks can be moved out to the client. The advantages of such an architecture include the ability to server almost all assets from a global CDN and only serving small blocks of JSON from the application server.
-
-
 
 ### Requests
 HTTP is first and foremost a request and response protocol. A client sends a request to the server, 
