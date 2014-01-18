@@ -1,14 +1,12 @@
 # Web Apps, Browsers, Servers, and the HTTP Protocol, OH MY! (A technical history lesson)
 
-Dynamic, interactive, media-rich web applications dominate today's internet landscape. One need only go back two decades in a way back machine to see the origins of the modern Web. Simple hypertext documents with hyperlinks to other documents constituted what was known as the web at the time, HTTP only supported `GET` requests, and any errors had to be inferred through the HTML or PLAINTEXT content of the response since there was no notion of a _Status Code_.
+Dynamic, interactive, media-rich web applications dominate today's internet landscape, but one needs only go back two decades in a way back machine to see a simple and static world wide web. Static Hypertext documents with Hyperlinks to other documents constituted the entirety of the web, HTTP only supported `GET` requests, and errors had to be inferred through the HTML or PLAINTEXT content of the response. This is the story of the web's transformation from static to dynamic and (almost) back again.
 
-## Gopher
+## The Static Web
 
 Prior to HTTP was [Gopher](http://en.wikipedia.org/wiki/Gopher_(protocol)) - a simple protocol for distributing, searching, and retrieving documents. Invented at University of Minnesota, Gopher presents a file-like hierarchy of data in addition to being a gateway to usenet and ftp. A major strength of gopher was the abilitiy to connect servers to share directories and resources. Alas, Gopher's rigid document structure was not flexible enough for demands of the web. Combined with licensing fees, implementations in browsers which also supporting HTTP, and licensing fees from the University, Gopher quickly fell out of favor in lieu of HTTP.
 
-## HTTP
-
-HTTP, short for Hypertext Transfer Protocol, was first documented at [version 0.9](http://www.w3.org/Protocols/HTTP/AsImplemented.html) in 1991. HTTP resources are identified via _Uniform Resource Identifiers_ (URIs) and often displayed as _hyperlinks_, a hypertext link to another resource. 
+The originally documented HTTP Protocol ([Version 0.9, 1991](http://www.w3.org/Protocols/HTTP/AsImplemented.html)) only suppoted GET requests, status codes did not exist. This was sufficient to deliver hypertext documents to clients, and it made sense with a static web to only allow information retrieval.
 
 ### Stateless
 
@@ -50,3 +48,6 @@ HTTP is first and foremost a request and response protocol. A client sends a req
 - Integrate scripting + web server
   - Ruby, Node, Java, D, Go, Python, Scala, C++, etc
   - Integrate web server and web app framework
+
+[RESTwiki]: http://en.wikipedia.org/wiki/Representational_state_transfer
+
