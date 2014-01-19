@@ -14,7 +14,7 @@ Dyanmic markup was being served already despite the simplicity of current HTTP. 
 
 Scripting languages were now in heavy use. FastCGI was being developed by Open Market, Inc. in the mid 90s to combat the overhead of standard CGI. Python has been available since 1991, and PHP and Ruby were released in 1995. All of these scripting languages were callable from both CGI and FastCGI. Combined with additional HTTP functionality, these scripting languages powered a dynamic web where users could both retrieve and update information on a server.
 
-The Apache web server (first released as update to NCSA httpd in 1995) became the most popular server of the time. The modular architecture offered embedded CGI, PHP, and Python 
+The Apache web server (first released as update to NCSA httpd in 1995) became the most popular server of the time. The modular architecture offered the ability to include interpretters and CGI handlers directly in the web server, thereby avoiding much overhead from generating dynamic markup. 
 
 Primitive web applications became possible due to dyanamically generated markup in concert with forward looking HTTP features. Such applications could could both retrieve and send data to the server, but every action would require a new request to the server to alter the page.
 
@@ -22,19 +22,19 @@ Client side scripting was introduced in 1995 when Netscape shipped a little  lan
 
 _HTTP/1.1_ finally standardized the full suite of HTTP request types, added connection reuse for transfering additional assets (scripts, images, etc), cache-control headers (which enabled very intelligent caching). Around the same time, Dr. Roy Fielding described _REST_, Representational State Transfer, in chapter 5 of his 2000 [doctoral dissertation](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm) _Architectural Styles and the Design of Network-based Software Architectures_. This architecture, when applied to the HTTP protocol and URIs, yields scalable interactions, general interfaces, and testable components. It is the basis of modern URI design for API end points and mapping of HTTP verbs to actions.
 
+## HTML5, RESTful JSON APIs, Client-Side Templating, and the JavaScript Framework
+
 Modern web apps utilize a large amount of state to deliver their service. Examples include deciding which content to send, remembering users between visits, maintaining a shopping cart when navigating between resources, and escalating a user's privilege to perform administrative actions. Since HTTP is a stateless protocol, those functionalities are achieved via _cookies_ (persistent named records stored on a client) which enable sessions and user tracking on the server.
 
 With the rise of RESTful JSON APIs, client side templating, and JavaScript frameworks, much of the work a web server does it limited to providing an API to the database. Most logic outside of administrative and other privileged tasks can be moved out to the client. The advantages of such an architecture include the ability to server almost all assets from a global CDN and only serving small blocks of JSON from the application server.
 
-### Requests
-HTTP is first and foremost a request and response protocol. A client sends a request to the server, 
 
 ## Notes
 
 - Browser history
 
 - XMLHttpRequest
-  - Invention credited to Microsoft for their Outlook Web App suite. This [first appeared](http://en.wikipedia.org/wiki/XMLHttpRequest#History_and_support) as IXMLHttpRequest in Internet Explorer 5.0 in March of 2009
+  - Invention credited to Microsoft for their Outlook Web App suite. This  as IXMLHttpRequest in Internet Explorer 5.0 in March of 2009
 
 - Dynamic Web
   - Client
