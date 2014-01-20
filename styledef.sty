@@ -1,0 +1,57 @@
+% PH3480.sty
+% Load packages
+\usepackage[font={footnotesize},labelfont={bf}]{caption}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{natbib}
+\usepackage{subfig}
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{psfrag}
+\usepackage{amsfonts}
+\usepackage{booktabs}
+\usepackage[usenames,dvipsnames]{color}
+
+\setlength{\voffset}{-1.0in}
+\setlength{\topmargin}{0.50in}		% Top margin
+\setlength{\headheight}{0.25in}		% Header height
+\setlength{\headsep}{0.25in}		% Separation between header and
+\setlength{\parindent}{0.25in}		% First line indentation
+\setlength{\footskip}{0.5in}
+% Set up left margin
+\setlength{\hoffset}{-0.50in}
+\setlength{\marginparsep}{0.00in}
+\setlength{\marginparwidth}{0.50in}
+\setlength{\oddsidemargin}{0.00in}
+% Body
+\setlength{\textwidth}{7.5in}
+\setlength{\textheight}{9.0in}
+
+
+% Rename references
+\renewcommand\bibname{References}
+
+% Setup dagger footnotes
+\long\def\symbolfootnote[#1]#2{\begingroup%
+\def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup}
+
+% Customize captions
+% \setlength{\captionmargin}{0.50in}
+% \setlength{\captionwidth}{5.00in}
+
+% redefined commands and environments
+%\renewcommand\topfraction{.9}
+\renewcommand\bottomfraction{.9}
+\renewcommand\textfraction{.1}
+
+% New Tabular environment
+% Use \tabular and \endtabular
+\newenvironment{smalltabular}{\bgroup\footnotesize\tabular}{\endtabular\egroup}
+
+% Graphics info
+\graphicspath{{./images/}}
+\DeclareGraphicsExtensions{.eps}
