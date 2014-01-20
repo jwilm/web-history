@@ -8,7 +8,7 @@ Prior to HTTP was [Gopher](http://en.wikipedia.org/wiki/Gopher_protocol) - a sim
 
 The originally documented HTTP Protocol ([Version 0.9, 1991](http://www.w3.org/Protocols/HTTP/AsImplemented.html)) only suppoted `GET` requests, status codes did not exist, and content was entirely static. This was sufficient to deliver simple hypertext documents, but additional request types, and a robust set of behavior modifying switches would be needed to propel HTTP into the 21st century.
 
-Dyanmic markup was being served already despite the simplicity of current HTTP. CGI (_Common Gateway Interface_) was [first being standardized](http://en.wikipedia.org/wiki/Common_Gateway_Interface#History) by the NCSA in 1993. CGI allowed web servers to run arbitrary programs on the host server (such as a Perl or Python script). There were several issues with this strategy including overhead from creation of new processes for each request, and the ease of introducing security holes in CGI script.
+Despite the current simplicity of HTTP, script generated dynamic markup was already being served. CGI (_Common Gateway Interface_) was [first being standardized](http://en.wikipedia.org/wiki/Common_Gateway_Interface#History) by the NCSA in 1993. CGI allowed web servers to run arbitrary programs on the host server (such as a Perl or Python script). There were several issues with this strategy including overhead from creation of new processes for each request, and the ease of introducing security holes in CGI script.
 
 ## A dynamic client and server
 
@@ -28,11 +28,11 @@ Let's examine that collection of technologies for a moment. JavaScript gives us 
 
 ## Inching Closer
 
-_HTTP/1.1_ finally standardized the full suite of HTTP request types, added connection reuse for transfering additional assets (scripts, images, etc), cache-control headers (which enabled very intelligent caching). Around the same time, Dr. Roy Fielding described _REST_, Representational State Transfer, in chapter 5 of his 2000 [doctoral dissertation](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm) _Architectural Styles and the Design of Network-based Software Architectures_. This architecture, when applied to the HTTP protocol and URIs, yields scalable interactions, general interfaces, and testable components. It is the basis of modern URI design for API end points and mapping of HTTP verbs to actions.
+_HTTP/1.1_ finally standardized the full suite of HTTP request types, added connection reuse for transfering additional assets (scripts, images, etc), cache-control headers (which enabled very intelligent caching). Around the same time, Dr. Roy Fielding described _REST_, Representational State Transfer, in chapter 5 of his [doctoral dissertation](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm) _Architectural Styles and the Design of Network-based Software Architectures_ (2000). This architecture, when applied to the HTTP protocol and URIs, yields scalable interactions, general interfaces, and testable components. It is the basis of modern URI design for API end points and mapping of HTTP verbs to actions.
 
 Fielding's REST architecture, HTTP/1.1, AJAX, PHP/ASP on the server, and client side scripting enabled complex web applications, yet the limitations of the DOM APIs prevent them from being compatible with desktop apps for several years to come. In the mean time, we see the rise of web forums (vBulletin 1999, phpBB 2000), online banking is [on the rise](http://thefinancialbrand.com/25380/yodlee-history-of-internet-banking/), google has [been returning extremely relevant results](http://www.google.com/about/company/history) since 1998, and Amazon had its [first profitable year](http://en.wikipedia.org/wiki/Amazon.com#History) (2001).
 
-## Stop here, bronson
+Performance and scaling of current technologies are emphasized in the next few years. The HAProxy TCP/IP load balancer was released in 2000. The Nginx event-driven asynchronous web server and reverse proxy was first released in 2002 as an alternative to the thread-based Apache httpd. 
 
 <!--
 
@@ -61,8 +61,7 @@ Audio/Video tags 2010
 WebGL
 WebRTC
 
-
-
+-->
 
 <!--
 HTML generation moved to client, servers left as API endpoints and permission enforcement
@@ -77,15 +76,7 @@ Modern web apps utilize a large amount of state to deliver their service. Exampl
 -->
 
 ## Notes
-
-- Browser history
-
-- XMLHttpRequest
-  - Invention credited to Microsoft for their Outlook Web App suite. This  as IXMLHttpRequest in Internet Explorer 5.0 in March of 2009
-
 - Dynamic Web
-  - Client
-    - Flash, Java, and JavaScript
   - Server
     - Common gateway interface
     - Run arbitrary code on the server to return dynamically generated HTML
@@ -95,21 +86,6 @@ Modern web apps utilize a large amount of state to deliver their service. Exampl
     - [Django](https://www.djangoproject.com/) 2005
     - [Sinatra](http://www.sinatrarb.com/) 2007
 
-- HTTP Protocol
-  - Preceeded by [Gopher](http://en.wikipedia.org/wiki/Gopher_protocol)
-
-- General purpose web servers
-  - [Apache](http://en.wikipedia.org/wiki/Apache_HTTP_Server) 1995
-    - Modular HTTP server
-    - mod_ssl, mod_php, mod_cgi, mod_proxy
-  - [Nginx](http://en.wikipedia.org/wiki/Nginx) 2002
-    - Open source reverse proxy for HTTP, HTTPS, SMTP, IMAP, POP3
-    - Load balancer
-    - HTTP Cache
-
 - Integrate scripting + web server
   - Ruby, Node, Java, D, Go, Python, Scala, C++, etc
   - Integrate web server and web app framework
-
-[RESTwiki]: http://en.wikipedia.org/wiki/Representational_state_transfer
-
