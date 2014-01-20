@@ -22,16 +22,51 @@ Primitive web applications became possible due to dyanamically generated markup 
 
 ## A Dynamic Client
 
-Client side scripting was introduced in 1995 when Netscape shipped a little  language called _LiveScript_ (now _JavaScript_) with their browser. The release of JavaScript was followed shortly by _Sun Java_ and _Macromedia Flash_. Browsers could now dynamically change the page content without any request to the server, but it would not be until 1999 when microsoft specified their IXMLHttpRequest that a page could communicate with the server and not trigger a full page reload. This new capability, combined with client side scripting and the _DOM_ would usher in the _AJAX_ era.
+Client side scripting was introduced in 1995 when Netscape shipped a little  language called _LiveScript_ (known now as _JavaScript_) with their browser. The release of JavaScript was followed shortly by _Sun Java_ and _Macromedia Flash_. These latter technologies were plugin based and in the long run are not able to compete with the power and security offered by JavaScript; although, flash is still widespread today - primarily for its versatility as a video player. Browsers could now dynamically update the page content without making a request to the server. Actually, they couldn't make a request to the server aside from requesting a new page entirely.
+
+That limitation began to lift 1999 when microsoft specified their `IXMLHttpRequest` which enabled Internet Explorer 5.0 to communicate with the server and not trigger a full page reload. Mozilla included a similar object called the `XMLHttpRequest` in december of 2000. Mozilla's object became the de facto standard until an official working draft specification was released in 2006 based on Mozilla's object. This new capability, combined with client side scripting and the _DOM_ would usher in the _AJAX_ era.
+
+Let's examine that collection of technologies for a moment. JavaScript gives us access to a couple of tools to fetch data and update the patch. The _DOM_  allows us to call methods on objects from the `document`. DOM APIs were initially limited to handling events and updating the HTML. We have the `XMLHttpRequest` for retrieving serialized data from the server. CSS has been around since 1996, and CSS2 first showed up in 1998. Collectively, these technologies form the basis of modern web applications - even today.
 
 _HTTP/1.1_ finally standardized the full suite of HTTP request types, added connection reuse for transfering additional assets (scripts, images, etc), cache-control headers (which enabled very intelligent caching). Around the same time, Dr. Roy Fielding described _REST_, Representational State Transfer, in chapter 5 of his 2000 [doctoral dissertation](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm) _Architectural Styles and the Design of Network-based Software Architectures_. This architecture, when applied to the HTTP protocol and URIs, yields scalable interactions, general interfaces, and testable components. It is the basis of modern URI design for API end points and mapping of HTTP verbs to actions.
 
-## HTML5, RESTful JSON APIs, Client-Side Templating, and the JavaScript Framework
+Together, HTTP/1.1, Fielding's REST architecture, AJAX, and client side scripting propel web apps to center stage. 
 
-Modern web apps utilize a large amount of state to deliver their service. Examples include deciding which content to send, remembering users between visits, maintaining a shopping cart when navigating between resources, and escalating a user's privilege to perform administrative actions. Since HTTP is a stateless protocol, those functionalities are achieved via _cookies_ (persistent named records stored on a client) which enable sessions and user tracking on the server.
+DOM API Rollout
+SVG 2001, coming into focus only recently with d3
+
+Desktop-like behavior APIs
+2008
+HTML5
+App cache
+Drag & Drop
+CSS Transitions 2008
+
+2009
+Web Workers (threading) 2009
+IndexDB
+
+2010
+Audio/Video tags 2010
+
+2011
+WebGL
+WebRTC
+
+
+
+
+<!--
+HTML generation moved to client, servers left as API endpoints and permission enforcement
 
 With the rise of RESTful JSON APIs, client side templating, and JavaScript frameworks, much of the work a web server does it limited to providing an API to the database. Most logic outside of administrative and other privileged tasks can be moved out to the client. The advantages of such an architecture include the ability to server almost all assets from a global CDN and only serving small blocks of JSON from the application server.
 
+-->
+
+<!--
+HTTP and STATE
+Modern web apps utilize a large amount of state to deliver their service. Examples include deciding which content to send, remembering users between visits, maintaining a shopping cart when navigating between resources, and escalating a user's privilege to perform administrative actions. Since HTTP is a stateless protocol, those functionalities are achieved via _cookies_ (persistent named records stored on a client) which enable sessions and user tracking on the server.
+-->
 
 ## Notes
 
