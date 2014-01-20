@@ -8,6 +8,8 @@ Prior to HTTP was [Gopher](http://en.wikipedia.org/wiki/Gopher_protocol) - a sim
 
 The originally documented HTTP Protocol ([Version 0.9, 1991](http://www.w3.org/Protocols/HTTP/AsImplemented.html)) only suppoted `GET` requests, status codes did not exist, and content was entirely static. This was sufficient to deliver simple hypertext documents, but additional request types, and a robust set of behavior modifying switches would be needed to propel HTTP into the 21st century.
 
+## A Dynamic Server
+
 Dyanmic markup was being served already despite the simplicity of current HTTP. CGI (_Common Gateway Interface_) was [first being standardized](http://en.wikipedia.org/wiki/Common_Gateway_Interface#History) by the NCSA in 1993. CGI allowed web servers to run arbitrary programs on the host server (such as a Perl or Python script). There were several issues with this strategy including overhead from creation of new processes for each request, and the ease of introducing security holes in CGI script.
 
 `POST`, `PUT`, `DELETE`, and other request types were introduced into browsers as early as 1992, but the world had to wait until for an official specification until 1996 when the IETF released [RFC 1945](http://tools.ietf.org/html/rfc1945) _Hypertext Transfer Protocol -- HTTP/1.0_. Of course, that didn't stop web browsers from implementing such features. The spec described many features necessary to deliver today's modern application - namely two more request types, `POST` and `HEAD`, status codes, and a suite of powerful headers to enable compression, basic authentication, caching, and content-type switching.
@@ -16,7 +18,9 @@ Scripting languages were now in heavy use. FastCGI was being developed by Open M
 
 The Apache web server (first released as update to NCSA httpd in 1995) became the most popular server of the time. The modular architecture offered the ability to include interpretters and CGI handlers directly in the web server, thereby avoiding much overhead from generating dynamic markup. 
 
-Primitive web applications became possible due to dyanamically generated markup in concert with forward looking HTTP features. Such applications could could both retrieve and send data to the server, but every action would require a new request to the server to alter the page.
+Primitive web applications became possible due to dyanamically generated markup in concert with forward looking HTTP features. Such applications could could both retrieve and send data to the server, but every action would require a new request to the server to alter the page. _SSL_ (secure sockets layer), introduced in 1995, would allow HTTP to run within an encrypted tunnel and therefore enable secure business transactions.
+
+## A Dynamic Client
 
 Client side scripting was introduced in 1995 when Netscape shipped a little  language called _LiveScript_ (now _JavaScript_) with their browser. The release of JavaScript was followed shortly by _Sun Java_ and _Macromedia Flash_. Browsers could now dynamically change the page content without any request to the server, but it would not be until 1999 when microsoft specified their IXMLHttpRequest that a page could communicate with the server and not trigger a full page reload. This new capability, combined with client side scripting and the _DOM_ would usher in the _AJAX_ era.
 
