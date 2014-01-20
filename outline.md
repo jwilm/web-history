@@ -2,25 +2,23 @@
 
 Today we are inundated by dynamic, interactive, media-rich web applications with pixel perfect designs. [Fortunes are spent](http://www.fastcompany.com/1825005/how-one-second-could-cost-amazon-16-billion-sales) each year on shaving a few kilobytes off file size and a few milliseconds off page load times to deliver an immersive experience across mobile, tablets, and desktop clients. Just two decades ago, the internet was a dramatically different landscape having little in common with modern web apps. Static Hypertext documents constituted the entirety of the web, HTTP only supported `GET` requests, and errors had to be inferred through the HTML or PLAINTEXT content of the response. This is the story of the web's transformation from static to dynamic and (almost) back again.
 
-## The Early Web
+## In the beginning
 
 Prior to HTTP was [Gopher](http://en.wikipedia.org/wiki/Gopher_protocol) - a simple protocol for distributing, searching, and retrieving documents. Invented at University of Minnesota, Gopher presents a file-like hierarchy of data in addition to being a gateway to usenet and ftp. A major strength of gopher was the abilitiy to connect servers to share directories and resources. Alas, Gopher's rigid document structure was not flexible enough for demands of the web. Combined with licensing fees, implementations in browsers which also supporting HTTP, and licensing fees from the University, Gopher quickly fell out of favor in lieu of HTTP.
 
 The originally documented HTTP Protocol ([Version 0.9, 1991](http://www.w3.org/Protocols/HTTP/AsImplemented.html)) only suppoted `GET` requests, status codes did not exist, and content was entirely static. This was sufficient to deliver simple hypertext documents, but additional request types, and a robust set of behavior modifying switches would be needed to propel HTTP into the 21st century.
 
-## A Dynamic Server
-
 Dyanmic markup was being served already despite the simplicity of current HTTP. CGI (_Common Gateway Interface_) was [first being standardized](http://en.wikipedia.org/wiki/Common_Gateway_Interface#History) by the NCSA in 1993. CGI allowed web servers to run arbitrary programs on the host server (such as a Perl or Python script). There were several issues with this strategy including overhead from creation of new processes for each request, and the ease of introducing security holes in CGI script.
+
+## A dynamic client and server
 
 `POST`, `PUT`, `DELETE`, and other request types were introduced into browsers as early as 1992, but the world had to wait until for an official specification until 1996 when the IETF released [RFC 1945](http://tools.ietf.org/html/rfc1945) _Hypertext Transfer Protocol -- HTTP/1.0_. Of course, that didn't stop web browsers from implementing such features. The spec described many features necessary to deliver today's modern application - namely two more request types, `POST` and `HEAD`, status codes, and a suite of powerful headers to enable compression, basic authentication, caching, and content-type switching.
 
 Scripting languages were now in heavy use. FastCGI was being developed by Open Market, Inc. in the mid 90s to combat the overhead of standard CGI. Python has been available since 1991, and PHP and Ruby were released in 1995. All of these scripting languages were callable from both CGI and FastCGI. Combined with additional HTTP functionality, these scripting languages powered a dynamic web where users could both retrieve and update information on a server.
 
-The Apache web server (first released as update to NCSA httpd in 1995) became the most popular server of the time. The modular architecture offered the ability to include interpretters and CGI handlers directly in the web server, thereby avoiding much overhead from generating dynamic markup. 
+The Apache web server (first released as update to NCSA httpd in 1995) became the most popular server of the time. The modular architecture offered the ability to include interpretters and CGI handlers directly in the web server, thereby avoiding much overhead from generating dynamic markup. In the same year, the popular open source database _MySQL_ was released. Together with PHP and Linux, these components would form the famous LAMP stack for web servers.
 
-Primitive web applications became possible due to dyanamically generated markup in concert with forward looking HTTP features. Such applications could could both retrieve and send data to the server, but every action would require a new request to the server to alter the page. _SSL_ (secure sockets layer), introduced in 1995, would allow HTTP to run within an encrypted tunnel and therefore enable secure business transactions.
-
-## A Dynamic Client
+Primitive web applications became possible due to dyanamically generated markup in concert with forward looking HTTP features. Such applications could could both retrieve and send data to the server, but every action would require a new request to the server to alter the page. _SSL_ (secure sockets layer), introduced in 1995, would allow HTTP to run within an encrypted tunnel and therefore enable secure business transactions. The lack of SSL prior to then did not stop the Stanford Federal Credit Union from [offering internet banking services](http://en.wikipedia.org/wiki/Online_banking#History) as early as 1994.
 
 Client side scripting was introduced in 1995 when Netscape shipped a little  language called _LiveScript_ (known now as _JavaScript_) with their browser. The release of JavaScript was followed shortly by _Sun Java_ and _Macromedia Flash_. These latter technologies were plugin based and in the long run are not able to compete with the power and security offered by JavaScript; although, flash is still widespread today - primarily for its versatility as a video player. Browsers could now dynamically update the page content without making a request to the server. Actually, they couldn't make a request to the server aside from requesting a new page entirely.
 
@@ -28,9 +26,19 @@ That limitation began to lift 1999 when microsoft specified their `IXMLHttpReque
 
 Let's examine that collection of technologies for a moment. JavaScript gives us access to a couple of tools to fetch data and update the patch. The _DOM_  allows us to call methods on objects from the `document`. DOM APIs were initially limited to handling events and updating the HTML. We have the `XMLHttpRequest` for retrieving serialized data from the server. CSS has been around since 1996, and CSS2 first showed up in 1998. Collectively, these technologies form the basis of modern web applications - even today.
 
+## Inching Closer
+
 _HTTP/1.1_ finally standardized the full suite of HTTP request types, added connection reuse for transfering additional assets (scripts, images, etc), cache-control headers (which enabled very intelligent caching). Around the same time, Dr. Roy Fielding described _REST_, Representational State Transfer, in chapter 5 of his 2000 [doctoral dissertation](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm) _Architectural Styles and the Design of Network-based Software Architectures_. This architecture, when applied to the HTTP protocol and URIs, yields scalable interactions, general interfaces, and testable components. It is the basis of modern URI design for API end points and mapping of HTTP verbs to actions.
 
-Together, HTTP/1.1, Fielding's REST architecture, AJAX, and client side scripting propel web apps to center stage. 
+Fielding's REST architecture, HTTP/1.1, AJAX, PHP/ASP on the server, and client side scripting enabled complex web applications, yet the limitations of the DOM APIs prevent them from being compatible with desktop apps for several years to come. In the mean time, we see the rise of web forums (vBulletin 1999, phpBB 2000), online banking is [on the rise](http://thefinancialbrand.com/25380/yodlee-history-of-internet-banking/), google has [been returning extremely relevant results](http://www.google.com/about/company/history) since 1998, and Amazon had its [first profitable year](http://en.wikipedia.org/wiki/Amazon.com#History) (2001).
+
+## Stop here, bronson
+
+<!--
+
+So we've got http, rest, ajax, client scripting, and primarily PHP/ASP for server side scripting. Limited web applications 
+
+
 
 DOM API Rollout
 SVG 2001, coming into focus only recently with d3
