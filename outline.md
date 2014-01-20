@@ -24,7 +24,7 @@ Client side scripting was introduced in 1995 when Netscape shipped a language ca
 
 That limitation began to lift 1999 when Microsoft specified their `IXMLHttpRequest` which enabled Internet Explorer 5.0 to communicate with the server and not trigger a full page reload. Mozilla included a similar object called the `XMLHttpRequest` in december of 2000. Mozilla's object became the de facto standard until an official working draft specification was released in 2006 based on Mozilla's object. This new capability, combined with client side scripting and the _DOM_ would usher in the _AJAX_ era.
 
-Let's examine that collection of technologies for a moment. JavaScript gives us access to a couple of tools to fetch data and update the patch. The _DOM_  allows us to call methods on objects from the `document`. DOM APIs were initially limited to handling events and updating the HTML. We have the `XMLHttpRequest` for retrieving serialized data from the server. CSS has been around since 1996, and CSS2 first showed up in 1998. Collectively, these technologies form the basis of modern web applications - even today.
+Let's examine that collection of technologies for a moment. JavaScript gives us access to a couple of tools to fetch data and update the page. The _DOM_  allows us to call methods on objects from the `document`. DOM APIs were initially limited to handling events and updating the HTML. We have the `XMLHttpRequest` for retrieving serialized data from the server. CSS has been around since 1996, and CSS2 first showed up in 1998. Collectively, these technologies form the basis of modern web applications - even today.
 
 ## Inching Closer
 
