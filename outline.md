@@ -32,7 +32,16 @@ _HTTP/1.1_ finally standardized the full suite of HTTP request types, added conn
 
 Fielding's REST architecture, HTTP/1.1, AJAX, PHP/ASP on the server, and client side scripting enabled complex web applications, yet the limitations of the DOM APIs prevent them from being compatible with desktop apps for several years to come. In the mean time, we see the rise of web forums (vBulletin 1999, phpBB 2000), online banking is [on the rise](http://thefinancialbrand.com/25380/yodlee-history-of-internet-banking/), google has [been returning extremely relevant results](http://www.google.com/about/company/history) since 1998, and Amazon had its [first profitable year](http://en.wikipedia.org/wiki/Amazon.com#History) in 2001.
 
-Performance and scaling of current technologies are emphasized in the next few years. The HAProxy TCP/IP load balancer was released in 2000. The Nginx event-driven asynchronous web server and reverse proxy was first released in 2002 as an alternative to the thread-based Apache httpd. 
+Performance and scaling of current technologies are emphasized in the next few years. The HAProxy TCP/IP load balancer was released in 2000. The Nginx event-driven asynchronous web server and reverse proxy was first released in 2002 as an alternative to the thread-based Apache httpd. Memcached came out in 2003 as an in memory cache to reduce load on database servers. These tools are the first in a series of blows to the powerful LAMP stack. This trend continues in the following years with the rise of the full-stack server side web framework.
+
+Python's Django is the first to the scene in mid 2005, and it is followed shortly by Ruby on Rails. Both frameworks offer traditional MVC architecture for generating dynamic markup to be rendered in the browser. 
+
+### Client Side web frameworks
+
+### HTML5 - desktop app features in the web
+
+### Far from exhaustive
+This timeline has only scratched the surface of what is a complex history for the web app era. Many databases have come and gone over this time period. We have seen in the last few years the rise of NoSQL and the resurgence of SQL databases. Application
 
 <!--
 
