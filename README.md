@@ -1,3 +1,5 @@
+This is an essay I wrote for a job application in January 2013.
+
 # Web Apps, Browsers, Servers, and the HTTP Protocol, OH MY! (A technical history lesson)
 
 Today we are inundated by dynamic, interactive, media-rich web applications with pixel perfect designs. [Fortunes are spent](http://www.fastcompany.com/1825005/how-one-second-could-cost-amazon-16-billion-sales) each year on shaving a few kilobytes off of file size and a few milliseconds off of page load times to deliver an immersive experience across mobile, tablets, and desktop clients. Just two decades ago, the internet was a dramatically different landscape having little in common with modern web apps. Static Hypertext documents constituted the entirety of the web, HTTP only supported `GET` requests, and errors had to be inferred through the HTML or PLAINTEXT content of the response. This is the story of the web's transformation from static to dynamic and (almost) back again.
